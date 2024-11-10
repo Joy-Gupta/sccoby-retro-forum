@@ -35,16 +35,16 @@ const displayAllPost = (posts) => {
         const div = document.createElement('div')
         div.innerHTML = `
             <div class="w-full bg-gray-100 rounded-xl border border-green-400 p-4 flex gap-4">
-                <div class="w-2/12 relative">
-                    <div class="w-28 h-28 rounded-md border border-green-400 overflow-hidden">
-                      <img src="${image}" alt="" class="w-full ">
+                <div class="w-2/12 mx-4 relative">
+                    <div class="w-24 h-28 rounded-md border border-green-400 overflow-hidden">
+                      <img src="${image}" alt="" class="lg:w-full">
                     </div>
                     
                     <div class="badge  badge-md absolute -top-1 -right-1 ${isActive ? "bg-green-500" : "bg-red-500"}"></div>
                     
                 </div>
     
-                <div class="w-10/12  ">
+                <div class="w-10/12 ">
                     <div class="flex gap-20">
                       <p class=" text-gray-400  mb-3">Category: <span class="text-green-500 font-semibold"> ${category} </span> </p>
                       <p class=" text-gray-400  mb-3 ">Author : <span class="text-green-500 font-semibold"> ${author.name} </span> </p>
@@ -64,7 +64,7 @@ const displayAllPost = (posts) => {
                     </div>
     
                     <div>
-                        <button onclick="markAsRead('${post.title}', ' ${ post.description}' ,' ${post.author.name} ' ,' ${post.category} ' ,' ${post.comment_count } ' ,' ${post.view_count} ' ,' ${ post.posted_time} ')"><i class="fa-solid fa-envelope-open bg-green-600 p-3 rounded-full text-white cursor-pointer"></i></button>
+                        <button onclick="markAsRead('${post.title}', ' ${ post.description}' ,' ${post.author.name} ' ,' ${post.category} ' ,' ${post.comment_count } ' ,' ${post.view_count} ' ,' ${ post.posted_time} ')"><i class="fa-solid fa-envelope-open bg-green-600 p-3 rounded-full text-white cursor-pointer"></i>Read</button>
                       </div>
                     </div>
     
